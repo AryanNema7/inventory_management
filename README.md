@@ -1,9 +1,9 @@
 
 ---
  
-### **📌 `README.md` for PoC Inventory Management System**
+### **📌 `README.md` for Inventory Management System**
 
-# 🏪 Inventory Management System (PoC)
+# 🏪 Inventory Management System 
  
 This is a **CRUD application for an Inventory Management System**  built with **Golang (Gin framework)** and **JWT-based authentication**.  
 It provides basic **CRUD operations** for managing inventory items with user authentication.

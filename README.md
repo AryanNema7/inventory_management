@@ -5,7 +5,7 @@
 
 # 🏪 Inventory Management System (PoC)
  
-This is a **Proof-of-Concept (PoC)** Inventory Management System built with **Golang (Gin framework)** and **JWT-based authentication**.  
+This is a **CRUD application for an Inventory Management System**  built with **Golang (Gin framework)** and **JWT-based authentication**.  
 It provides basic **CRUD operations** for managing inventory items with user authentication.
  
 ---

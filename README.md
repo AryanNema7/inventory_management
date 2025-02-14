@@ -2,7 +2,7 @@
 ---
  
 ### **📌 `README.md` for PoC Inventory Management System**
-```md
+
 # 🏪 Inventory Management System (PoC)
  
 This is a **Proof-of-Concept (PoC)** Inventory Management System built with **Golang (Gin framework)** and **JWT-based authentication**.  

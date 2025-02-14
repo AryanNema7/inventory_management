@@ -49,13 +49,43 @@ go version
  
 ---
  
-## 🔧 **3️⃣ Install Project Dependencies**
+## 🔧 ** Install Project Dependencies**
 Once Go is installed, run:
 ```sh
+cd < `project-folder-where-you-cloned-the-repo` >
 go mod tidy
 ```
 This will download all required dependencies.
  
+---
+
+---
+📦  **Install Required Go Modules**
+Before running the application, install all dependencies using:
+
+```sh
+
+go mod tidy
+```
+This will download the necessary modules for the project.
+
+✅ Ensure the following required modules are installed (if there is any error in `go mod tidy` manually install following):
+
+```sh
+
+go get github.com/gin-gonic/gin
+go get github.com/golang-jwt/jwt/v5
+go get github.com/glebarez/sqlite
+go get github.com/joho/godotenv
+go get github.com/gin-contrib/cors
+go get github.com/ulule/limiter/v3
+If any module is missing, manually install it using:
+```
+If any module is missing, manually install it using:
+```sh
+
+go get <module_name>
+```
 ---
  
 ## 🔑 **4️⃣ Set Up JWT Authentication**
@@ -66,12 +96,12 @@ Use **OpenSSL** to generate a secure secret key.
  
 #### **Windows (PowerShell)**
 ```powershell
-$env:JWT_SECRET_KEY = openssl rand -base64 32
+"JWT_SECRET_KEY=$(openssl rand -base64 32)" | Out-File -Encoding ascii .env
 ```
  
 #### **Linux/macOS**
 ```sh
-export JWT_SECRET_KEY=$(openssl rand -base64 32)
+echo "JWT_SECRET_KEY=$(openssl rand -base64 32)" > .env
 ```
  
 To persist this value across sessions, **add it to `~/.bashrc` or `~/.zshrc`**.
@@ -130,12 +160,7 @@ Once started, the server will be running on **`http://localhost:8080`**.
 ---
  
 ## ❓ **Troubleshooting**
-**🔹 JWT Token Expired or Invalid?**  
-Run this command to remove the existing JWT token:
-```sh
-localStorage.removeItem("jwt");
-console.log("✅ Removed old JWT token.");
-```
+**c
  
 **🔹 Facing Permission Issues on Windows?**  
 Run PowerShell as Administrator and try:
